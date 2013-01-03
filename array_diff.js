@@ -1,4 +1,4 @@
-var ad = (function (root) {
+var getArrayDiff = (function (root) {
 //
 // ============== UTILITY FUNCTIONS ============== 
 //
@@ -354,6 +354,7 @@ var get_array_diff = function(from_val, to_val, equality_check) {
 	});
 	return { added: added, removed: removed, moved: moved, index_changed: index_changed , mapping: source_map};
 };
+/*
 
 var get_map_diff = function(key_diff, value_diff, keys) {
 	key_diff = clone(key_diff);
@@ -435,8 +436,10 @@ var get_map_diff = function(key_diff, value_diff, keys) {
 	}
 	return { set: set, unset: unset, key_change: key_change, value_change: value_change, index_changed: index_changed, moved: moved}
 };
+*/
 
 
+/*
 var array_differ = function(val, equality_check) {
 	var last_val = isArray(val) ? val : [];
 	return function(val) {
@@ -445,5 +448,7 @@ var array_differ = function(val, equality_check) {
 		return diff;
 	};
 };
+*/
 
+return get_array_diff;
 }(this));
